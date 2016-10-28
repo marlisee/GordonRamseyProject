@@ -13,7 +13,7 @@ AudioSample beat3;
 
 TTS tts;
 
-PImage [] img;
+PImage sugar;
 
 //int pinkClick = 0;
 //int blueClick = 0;
@@ -28,14 +28,11 @@ void setup(){
   
   beat3= minim.loadSample("controller3.wav");
   
-  img = new PImage[2];
-  img[0] = loadImage("frog_pink.png");
-  img[1] = loadImage("frog_blue.png");
+  sugar = loadImage("sugar.png");
+  sugar.resize(500,500);
 }
 
 void draw(){
-  image (img[1], 30, -55);
-  image (img[0], 80, 10);
 }
 
 void mouseReleased() {
@@ -46,5 +43,7 @@ void keyPressed(){
   
   if (key == 'z'|| key == 'Z') {
     tts.speak("sugar");
+    imageMode(CENTER);
+    image (sugar, width/2, height/2);
   }
 }

@@ -13,7 +13,7 @@ AudioSample beat;
 
 TTS tts;
 
-PImage [] img;
+PImage butter;
 
 //int pinkClick = 0;
 //int blueClick = 0;
@@ -28,14 +28,11 @@ void setup(){
   
   beat= minim.loadSample("beat2.wav");
   
-  img = new PImage[2];
-  img[0] = loadImage("frog_pink.png");
-  img[1] = loadImage("frog_blue.png");
+  butter = loadImage("butter.png");
+  butter.resize(500,500);
 }
 
 void draw(){
-  image (img[1], 30, -55);
-  image (img[0], 80, 10);
 }
 
 void mouseReleased() {
@@ -50,6 +47,8 @@ void keyPressed(){
   
   if (key == 'z'|| key == 'Z') {
     tts.speak("bubububutter");
+    imageMode(CENTER);
+    image (butter, width/2, height/2);
   }
   
   if (key == 'x'|| key == 'X') {
