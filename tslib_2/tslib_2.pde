@@ -1,3 +1,6 @@
+//press z for center image and speech 
+//press x to trigger beat 
+
 import guru.ttslib.*;
 
 import ddf.minim.*;
@@ -47,6 +50,7 @@ void keyPressed(){
   
   if (key == 'z'|| key == 'Z') {
     tts.speak("bubububutter");
+    background(random(255), random(255), random(255));
     imageMode(CENTER);
     image (butter, width/2, height/2);
   }

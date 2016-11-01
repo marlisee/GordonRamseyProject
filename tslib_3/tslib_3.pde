@@ -1,3 +1,5 @@
+//press z for sugar (image and speech) 
+
 import guru.ttslib.*;
 
 import ddf.minim.*;
@@ -14,12 +16,23 @@ AudioSample beat3;
 TTS tts;
 
 PImage sugar;
+PImage sugar1; 
+PImage sugar2; 
+PImage sugar3;
+PImage sugar4;
+PImage sugar5; 
+
+float xpos = 200;
+float ypos = 50;
+float vy = 0;
+float gravity = 0.2;
 
 //int pinkClick = 0;
 //int blueClick = 0;
 //int radius = 30;
 
 void setup(){
+  smooth();
   fullScreen();
   background(92, 82, 228);
   tts = new TTS();
@@ -30,14 +43,38 @@ void setup(){
   
   sugar = loadImage("sugar.png");
   sugar.resize(500,500);
+  
+  sugar1 = loadImage("sugar1.png"); 
+  sugar1.resize(100, 100); 
+  
+  sugar2 = loadImage("sugar2.png"); 
+  sugar2.resize(100, 100); 
+  
+  sugar3 = loadImage("sugar3.png"); 
+  sugar3.resize(100, 100); 
+  
+  sugar4 = loadImage("sugar4.png"); 
+  sugar4.resize(100, 100); 
+  
+  sugar5 = loadImage("sugar5.png"); 
+  sugar5.resize(100, 100); 
 }
-
 void draw(){
+
+    
+  text( "x: " + mouseX + " y: " + mouseY, mouseX, mouseY );
+  
+  vy += gravity;
+  ypos += vy;
+  
+  if (keyPressed = true) {
+    if (key == 'a'|| key == 'A') {
+      background(92, 82, 228);
+      image(sugar1, xpos, ypos); 
+    }
+  }
 }
 
-void mouseReleased() {
-    
-}
 
 void keyPressed(){
   
