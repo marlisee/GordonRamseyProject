@@ -1,3 +1,8 @@
+//press s for cake 
+// press A for gordon 
+//press q to talk (can't press anything until speech finishes) 
+//press z for dough 
+
 import guru.ttslib.*;
 
 import ddf.minim.*;
@@ -107,8 +112,8 @@ void keyPressed(){
     image (dough, width/2, height/2);
   }
   
-    if (key == 'x'|| key == 'X') {
-      beat3.trigger();
-    }
+    //if (key == 'x'|| key == 'X') {
+    //  beat3.trigger();
+    //}
   
 }

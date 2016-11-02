@@ -1,4 +1,5 @@
 //press z for sugar (image and speech) 
+//press a for gravity sugar 
 
 import guru.ttslib.*;
 
@@ -62,7 +63,7 @@ void setup(){
 void draw(){
 
     
-  text( "x: " + mouseX + " y: " + mouseY, mouseX, mouseY );
+  //text( "x: " + mouseX + " y: " + mouseY, mouseX, mouseY );
   
   vy += gravity;
   ypos += vy;
@@ -70,7 +71,9 @@ void draw(){
   if (keyPressed = true) {
     if (key == 'a'|| key == 'A') {
       background(92, 82, 228);
-      image(sugar1, xpos, ypos); 
+      image(sugar1, xpos + 500, ypos); 
+      image(sugar2, xpos/2 + 500, ypos/2); 
+      image(sugar3, xpos/3 + 500, ypos/3); 
     }
   }
 }

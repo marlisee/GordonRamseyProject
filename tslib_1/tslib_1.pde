@@ -89,9 +89,3 @@ void keyPressed(){
     beat.trigger();
   }
 }
-
-void keyReleased(){
-  if (key == 'z'|| key == 'Z'){
-    background(92, 82, 228);
-  }
-}

@@ -1,4 +1,4 @@
-//press z for center image and speech 
+//press z for center image and speech and bg color change 
 //press x to trigger beat 
 
 import guru.ttslib.*;
@@ -44,9 +44,9 @@ void mouseReleased() {
 
 void keyPressed(){
   
-  if ( key == 'a'|| key == 'A') {
-    tts.speak("");
-  }
+  //if ( key == 'a'|| key == 'A') {
+  //  tts.speak("");
+  //}
   
   if (key == 'z'|| key == 'Z') {
     tts.speak("bubububutter");
